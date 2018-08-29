@@ -28,6 +28,9 @@ install:
   - yarn install
   - composer install
 
+before_script:
+  - composer run set-config
+
 script:
   - yarn run test
   - composer run test
