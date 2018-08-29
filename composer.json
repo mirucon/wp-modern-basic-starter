@@ -1,0 +1,19 @@
+{
+  "require": {
+    "inc2734/wp-breadcrumbs": "^1.0",
+    "inc2734/wp-oembed-blog-card": "^3.0",
+    "inc2734/wp-share-buttons": "^1.0",
+    "inc2734/wp-like-me-box": "^0.1.5"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.* | > 3.1",
+    "wp-coding-standards/wpcs": "1.*",
+    "phpcompatibility/php-compatibility": "*"
+  },
+  "scripts": {
+    "set-config": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/wp-coding-standards/wpcs",
+    "test": "\"vendor/bin/phpcs\" --ignore=*/vendor/*,*/node_modules/* --extensions=php ./ --standard=phpcs.xml",
+    "lint": "\"vendor/bin/phpcs\" --ignore=*/vendor/*,*/node_modules/* --extensions=php ./ --standard=phpcs.xml",
+    "fix": "\"vendor/bin/phpcbf\" --ignore=*/vendor/*,*/node_modules/* --extensions=php ./ --standard=phpcs.xml"
+  }
+}

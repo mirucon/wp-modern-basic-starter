@@ -1,0 +1,32 @@
+sudo: false
+
+language: php
+
+matrix:
+  include:
+  - php: 7.2
+    env: WP_VERSION=latest
+
+notifications:
+  email: false
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+  - vendor
+  - node_modules
+
+before_install:
+  - nvm use
+  - npm i -g yarn
+
+install:
+  - yarn install
+  - composer install
+
+script:
+  - yarn run test
+  - composer run test

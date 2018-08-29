@@ -1,1 +1,3 @@
 # wp-modern-basic-starter
+
+> WordPress starter theme with SCSS, Webpack, babel, postcss, etc...
