@@ -1,7 +1,7 @@
 const path = require('path')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = (env, argv) => {
@@ -41,10 +41,15 @@ module.exports = (env, argv) => {
     devtool: isDevMode ? 'source-map' : 'none',
     optimization: {
       minimizer: [
-        new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          sourceMap: true
+        new TerserPlugin({
+          terserOptions: {
+            parallel: true,
+            sourceMap: true,
+            compress: {
+              collapse_vars: false, // workaround for a minifier's bug: https://github.com/terser-js/terser/issues/120
+              drop_console: true
+            }
+          }
         }),
         new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/,

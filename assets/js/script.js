@@ -1,3 +1,1 @@
-'use strict'
-
-window.addEventListener('COMContentLoaded', () => {})
+document.addEventListener('DOMContentLoaded', () => {})

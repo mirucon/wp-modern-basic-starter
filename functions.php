@@ -12,8 +12,8 @@
  **/
 add_action(
 	'wp_enqueue_scripts', function() {
-		wp_enqueue_style( 'theme-style', get_theme_file_uri( 'assets/css/style.min.css' ), [], '0.1.0' );
-		wp_enqueue_script( 'theme-script', get_theme_file_uri( 'assets/js/min/scripts.js' ), [], '0.1.0', false );
+		wp_enqueue_style( 'theme-style', get_theme_file_uri( 'public/css/style.css' ), [], '0.1.0' );
+		wp_enqueue_script( 'theme-script', get_theme_file_uri( 'public/js/script.js' ), [], '0.1.0', false );
 	}
 );
 

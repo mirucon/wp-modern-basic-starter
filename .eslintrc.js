@@ -4,8 +4,12 @@ module.exports = {
   globals: {
     module: false,
     window: false,
+    document: false,
     location: false,
-    require: false
+    require: false,
+    console: false,
+    jQuery: false,
+    __dirname: false
   },
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
@@ -18,6 +22,7 @@ module.exports = {
         tabWidth: 2
       }
     ],
-    'no-extra-semi': 0
+    'no-extra-semi': 0,
+    'no-console': 0
   }
 }
