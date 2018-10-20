@@ -1,4 +1,3 @@
-
 /*
  |--------------------------------------------------------------------------
  | Browser-sync config file
@@ -17,7 +16,7 @@
  */
 
 module.exports = {
-    proxy: {
-      target: 'http://dev.local/'
-    }
-};
+  proxy: {
+    target: 'http://localhost:6400/'
+  }
+}
