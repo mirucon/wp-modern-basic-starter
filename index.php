@@ -5,6 +5,8 @@
  * @package Modern_Basic
  */
 
+namespace Modern_Basic\Index;
+
 get_header(); ?>
 
 <main id="main" class="home" role="main">
