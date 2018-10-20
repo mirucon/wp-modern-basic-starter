@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div class="container">
 
-		<?php $modern_basic_class_status = have_posts() ? 'view-has-post' : 'view-no-results'; ?>
+		<?php $modern_basic_class_status = have_posts() ? 'status__has_posts' : 'status__no_posts'; ?>
 
 		<div class="content__inner <?php echo esc_attr( $modern_basic_class_status ); ?>">
 
