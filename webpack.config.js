@@ -79,7 +79,7 @@ module.exports = (env, argv) => {
                   [
                     '@babel/preset-env',
                     {
-                      targets: '> 0.25% in JP, not dead',
+                      targets: '> 0.5%, not dead',
                       useBuiltIns: 'usage'
                     }
                   ]
