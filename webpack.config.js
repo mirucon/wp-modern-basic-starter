@@ -75,14 +75,21 @@ module.exports = (env, argv) => {
             {
               loader: 'babel-loader',
               options: {
-                presets: [['@babel/preset-env', { modules: false }]]
+                presets: [
+                  [
+                    '@babel/preset-env',
+                    {
+                      targets: '> 0.25% in JP, not dead',
+                      useBuiltIns: 'usage'
+                    }
+                  ]
+                ]
               }
             }
           ]
         },
         {
           test: /\.(sc|sa|c)ss$/,
-          exclude: /node_modules/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
