@@ -33,11 +33,19 @@ class Autoloader {
 	 */
 	const CLASSMAP
 		= [
-			'Enqueue_Scripts' =>
-				[
-					'file_path' => 'inc/core/class-enqueue-scripts',
-					'namespace' => 'Inc\Core',
-				],
+			'Enqueue_Scripts' => [
+				'file_path'  => 'inc/core/class-enqueue-scripts',
+				'namespace'  => 'Inc\Core',
+				'initialize' => true,
+			],
+			'Template_Helper' => [
+				'file_path' => 'inc/template/class-template-helper',
+				'namespace' => 'Inc\Template',
+			],
+			'Content_Loop'    => [
+				'file_path' => 'inc/template-parts/class-content-loop',
+				'namespace' => 'inc\Template_Parts',
+			],
 		];
 
 	/**
@@ -50,8 +58,11 @@ class Autoloader {
 
 		foreach ( self::CLASSMAP as $name => $path ) {
 			require_once get_theme_file_path( $path['file_path'] . '.php' );
-			$class = 'Modern_basic\\' . $path['namespace'] . "\\${name}";
-			new $class();
+
+			if ( array_key_exists( 'initialize', $path ) && $path['initialize'] ) {
+				$class = 'Modern_basic\\' . $path['namespace'] . "\\${name}";
+				new $class();
+			}
 		}
 	}
 
