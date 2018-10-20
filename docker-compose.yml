@@ -15,9 +15,11 @@ services:
    wordpress:
      depends_on:
        - db
+     volumes:
+       - ./:/var/www/html/wp-content/themes/wp_modern_basic
      image: wordpress:latest
      ports:
-       - "6300:80"
+       - "6400:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
