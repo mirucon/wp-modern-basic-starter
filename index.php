@@ -7,6 +7,7 @@
 
 namespace Modern_Basic\Index {
 
+	use Modern_Basic\Inc\Template\Template_Helper;
 	use Modern_Basic\Inc\Template_Parts\Content_Loop;
 
 	get_header(); ?>
@@ -30,6 +31,8 @@ namespace Modern_Basic\Index {
 						echo Content_Loop::view(); // WPCS: XSS OK.
 
 					endwhile;
+
+					echo Template_Helper::get_posts_navigation(); // WPCS: XSS OK.
 
 				else :
 					?>

@@ -63,7 +63,7 @@ class Template_Helper {
 	 *
 	 * @param array $labels The labels for zero, one, and more.
 	 *
-	 * @example $label = [
+	 * @example $labels = [
 	 *              'zero' => esc_html__( 'Comments: 0', 'modern-basic' ),
 	 *              'one'  => esc_html__( 'Comment: 1', 'modern-basic' ),
 	 *              'more' => esc_html__( 'Comments: %', 'modern-basic' ),
@@ -94,5 +94,31 @@ class Template_Helper {
 		<?php
 
 		return ob_get_clean();
+	}
+
+	/**
+	 * Get posts navigation.
+	 *
+	 * @param array $custom_args Custom args.
+	 *
+	 * @return string
+	 */
+	public static function get_posts_navigation( array $custom_args = [] ) {
+		$nav = get_the_posts_navigation(
+			array_merge(
+				[
+					'type'              => 'list',
+					'end_size'          => '2',
+					'mid_size'          => '3',
+					'total'             => $GLOBALS['wp_query']->max_num_pages,
+					'prev_text'         => '&laquo;',
+					'next_text'         => '&raquo;',
+					'after_page_number' => '',
+				],
+				$custom_args
+			)
+		);
+
+		return $nav;
 	}
 }

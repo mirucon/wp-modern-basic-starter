@@ -1,6 +1,8 @@
 <?php
 /**
  * Class file for Template_Meta.
+ *
+ * @package Modern_Basic
  */
 
 namespace Modern_Basic\Inc\Template;

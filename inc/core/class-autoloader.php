@@ -38,6 +38,11 @@ class Autoloader {
 				'namespace'  => 'Inc\Core',
 				'initialize' => true,
 			],
+			'Template_Meta'   => [
+				'file_path'  => 'inc/template/class-template-meta',
+				'namespace'  => 'Inc\Template',
+				'initialize' => true,
+			],
 			'Template_Helper' => [
 				'file_path' => 'inc/template/class-template-helper',
 				'namespace' => 'Inc\Template',
