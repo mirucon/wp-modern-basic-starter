@@ -56,7 +56,7 @@ class Autoloader {
 	/**
 	 * Class autoloader.
 	 */
-	public static function autoload() {
+	public static function autoload(): void {
 		if ( empty( self::CLASSMAP ) ) {
 			return;
 		}
@@ -74,7 +74,7 @@ class Autoloader {
 	/**
 	 * Load Composer autoloader
 	 */
-	public static function load_autoloader() {
+	public static function load_autoloader(): void {
 		if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 			require_once get_parent_theme_file_path( 'vendor/autoload.php' );
 		}

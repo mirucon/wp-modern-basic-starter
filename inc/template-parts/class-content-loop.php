@@ -25,8 +25,10 @@ class Content_Loop {
 
 	/**
 	 * View part of Content_Loop.
+	 *
+	 * @return string
 	 */
-	public static function view() {
+	public static function view(): string {
 		ob_start();
 
 		?>

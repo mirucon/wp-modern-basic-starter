@@ -27,7 +27,7 @@ class Enqueue_Scripts {
 	 *
 	 * @since 0.1.0
 	 **/
-	public function enqueue_scripts() {
+	public function enqueue_scripts(): void {
 		wp_enqueue_style(
 			'theme-style',
 			get_theme_file_uri( 'public/css/style.css' ),
@@ -53,7 +53,7 @@ class Enqueue_Scripts {
 	 *
 	 * @return string
 	 */
-	public function defer_scripts( $tag, $handle ) {
+	public function defer_scripts( $tag, $handle ): string {
 		$scripts_to_defer = [ 'theme-script' ];
 		foreach ( $scripts_to_defer as $defer_script ) {
 			if ( $defer_script === $handle ) {

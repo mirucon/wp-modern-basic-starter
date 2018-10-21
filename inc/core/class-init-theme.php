@@ -18,7 +18,7 @@ class Init_Theme {
 	/**
 	 * Initializes theme.
 	 */
-	public static function init_theme() {
+	public static function init_theme(): void {
 		Autoloader::autoload();
 		Autoloader::load_autoloader();
 	}

@@ -49,7 +49,8 @@ class Template_Helper {
 
 		<div class="post_category">
 			<!--<span class="fas fa-folder" aria-hidden="true"></span>-->
-			<span class="screen-reader-text"><?php esc_html_e( 'Categories:', 'modern-basic' ); ?></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Categories:',
+					'modern-basic' ); ?></span>
 			<?php the_category( $separator ); ?>
 		</div>
 
@@ -103,7 +104,7 @@ class Template_Helper {
 	 *
 	 * @return string
 	 */
-	public static function get_posts_navigation( array $custom_args = [] ) {
+	public static function get_posts_navigation( array $custom_args = [] ): string {
 		$nav = get_the_posts_navigation(
 			array_merge(
 				[
