@@ -33,21 +33,25 @@ class Autoloader {
 	 */
 	const CLASSMAP
 		= [
-			'Enqueue_Scripts' => [
+			'Enqueue_Scripts'        => [
 				'file_path'  => 'inc/core/class-enqueue-scripts',
 				'namespace'  => 'Inc\Core',
 				'initialize' => true,
 			],
-			'Template_Meta'   => [
+			'Template_Meta'          => [
 				'file_path'  => 'inc/template/class-template-meta',
 				'namespace'  => 'Inc\Template',
 				'initialize' => true,
 			],
-			'Template_Helper' => [
+			'Template_Helper'        => [
 				'file_path' => 'inc/template/class-template-helper',
 				'namespace' => 'Inc\Template',
 			],
-			'Content_Loop'    => [
+			'Template_Header_Helper' => [
+				'file_path' => 'inc/template/class-template-header-helper',
+				'namespace' => 'Inc\Template',
+			],
+			'Content_Loop'           => [
 				'file_path' => 'inc/template-parts/class-content-loop',
 				'namespace' => 'inc\Template_Parts',
 			],

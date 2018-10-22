@@ -49,8 +49,14 @@ class Template_Helper {
 
 		<div class="post_category">
 			<!--<span class="fas fa-folder" aria-hidden="true"></span>-->
-			<span class="screen-reader-text"><?php esc_html_e( 'Categories:',
-					'modern-basic' ); ?></span>
+			<span class="screen-reader-text">
+			<?php
+			esc_html_e(
+				'Categories:',
+				'modern-basic'
+			);
+			?>
+					</span>
 			<?php the_category( $separator ); ?>
 		</div>
 
