@@ -14,11 +14,11 @@ namespace Modern_Basic\Index {
 
 	<main id="main" class="home" role="main">
 
-		<div class="container">
+		<div class="main__container container">
 
-			<?php $modern_basic_class_status = have_posts() ? 'status__has_posts' : 'status__no_posts'; ?>
+			<?php $modern_basic_class_status = have_posts() ? 'content__has_posts' : 'content__no_posts'; ?>
 
-			<div class="content__inner <?php echo esc_attr( $modern_basic_class_status ); ?>">
+			<div id="content" class="content <?php echo esc_attr( $modern_basic_class_status ); ?>">
 
 				<?php
 				if ( have_posts() ) :

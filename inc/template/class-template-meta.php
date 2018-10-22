@@ -29,7 +29,7 @@ class Template_Meta {
 	 * @return array
 	 */
 	public function custom_post_class( array $classes ): array {
-		$classes[] = 'post_container';
+		$classes[] = 'post__container';
 
 		return $classes;
 	}

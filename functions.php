@@ -1,6 +1,6 @@
 <?php
 /**
- * The theme definitions.
+ * Initializes theme. No more. No less.
  *
  * @package Modern_Basic
  */

@@ -121,7 +121,7 @@ class Template_Header_Helper {
 
 		<header id="header" class="header" role="banner">
 
-			<div class="header__inner container">
+			<div class="header__container container">
 
 				<div class="site__info">
 

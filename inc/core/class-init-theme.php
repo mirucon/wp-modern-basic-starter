@@ -15,6 +15,7 @@ require_once get_theme_file_path( 'inc/core/class-autoloader.php' );
  * @package Modern_Basic
  */
 class Init_Theme {
+
 	/**
 	 * Initializes theme.
 	 */
