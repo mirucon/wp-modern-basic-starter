@@ -51,6 +51,10 @@ class Autoloader {
 				'file_path' => 'inc/template/class-template-header-helper',
 				'namespace' => 'Inc\Template',
 			],
+			'Template_Footer_Helper' => [
+				'file_path' => 'inc/template/class-template-footer-helper',
+				'namespace' => 'Inc\Template',
+			],
 			'Content_Loop'           => [
 				'file_path' => 'inc/template-parts/class-content-loop',
 				'namespace' => 'inc\Template_Parts',

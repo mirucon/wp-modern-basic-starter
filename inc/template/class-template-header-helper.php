@@ -125,9 +125,9 @@ class Template_Header_Helper {
 
 				<div class="site__info">
 
-					<?php echo self::get_site_title(); // WPCS: XSS OK. ?>
+					<?php echo static::get_site_title(); // WPCS: XSS OK. ?>
 
-					<?php echo self::get_site_description(); // WPCS: XSS OK. ?>
+					<?php echo static::get_site_description(); // WPCS: XSS OK. ?>
 
 				</div>
 
